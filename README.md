@@ -12,4 +12,8 @@ More about Aqua UI
 
 [Live example](https://normanlumilaan.github.io/aqua-ui/)
 
+### Resources
+
+[https://cursor.in](cursor)
+
 All rights to their respective owners.

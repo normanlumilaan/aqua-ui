@@ -34,6 +34,12 @@ body {
   transition: translate 400ms;
 }
 
+.loading {
+  cursor:
+    url('../../assets/cursor/default.svg') 16 16,
+    auto;
+}
+
 @media screen and (min-width: 768px) {
   #desktop .aqua-window {
     position: absolute;

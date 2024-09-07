@@ -7,7 +7,7 @@ import { MenuBar } from './MenuBar'
 
 export const Desktop: React.FC = () => {
   return (
-    <>
+    <div className="desktop loading">
       <MenuBar />
       <main id="desktop">
         <InfoWindow title="About" id="ui-window-info-1" />
@@ -18,7 +18,7 @@ export const Desktop: React.FC = () => {
         />
         <DialogConfirm focus={false} title="Confirm" id="aqua-dialog-1" />
       </main>
-    </>
+    </div>
   )
 }
 
