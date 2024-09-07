@@ -1,8 +1,4 @@
 :root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-size: 62.5%;
 }
 
@@ -11,7 +7,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'lucida_granderegular', sans-serif;
+  font-family: var(--aqua-font-family);
   font-size: 1.6rem;
   font-weight: 400;
   font-style: normal;
@@ -22,6 +18,10 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #desktop {
