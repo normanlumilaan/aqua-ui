@@ -9,6 +9,7 @@
   white-space: nowrap;
   font-family: var(--aqua-font-family);
   font-size: var(--aqua-font-size);
+  line-height: var(--aqua-line-height);
   color: var(--aqua-color-black);
   background: radial-gradient(
     circle at 50% 40%,
@@ -19,7 +20,7 @@
   box-sizing: border-box;
   border: 1px solid var(--aqua-color-gray-3);
   border-radius: 50%;
-  box-shadow: 0 2px 5px var(--aqua-shadow-color);
+  box-shadow: 0 0px 5px var(--aqua-shadow-color);
   width: 1.3em;
   height: 1.3em;
   padding: 0.2em;

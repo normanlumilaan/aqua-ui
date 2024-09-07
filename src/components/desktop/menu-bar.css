@@ -33,6 +33,7 @@
 
 .aqua-menubar__item--programname {
   font-weight: 600;
+  font-family: 'Lucida Grande Bold';
 }
 
 .aqua-menubar__item--clock {

@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Lucida Grande';
+  src: url('./lucidagrande.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: 'Lucida Grande Bold';
+  src: url('./lucidagrande_bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+}
