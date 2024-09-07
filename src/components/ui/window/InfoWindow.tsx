@@ -22,7 +22,10 @@ export const InfoWindow: React.FC<{ id: string; title: string }> = ({
                       OS X 10.0 screenshots
                     </a>
                   </p>
-                  <a className="link link--icon" href="#">
+                  <a
+                    className="link link--icon"
+                    href="https://github.com/normanlumilaan/aqua-ui"
+                  >
                     <figure className="icon icon--sm">
                       <img src={githubLogo} alt="GitHub logo" />
                     </figure>
