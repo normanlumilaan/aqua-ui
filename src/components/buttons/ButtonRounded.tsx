@@ -11,7 +11,13 @@ export const ButtonRounded: React.FC<ButtonRoundedProps> = ({
   ...props
 }) => {
   return (
-    <Button label={label} color={color} shape="rounded" {...props}>
+    <Button
+      className={className}
+      label={label}
+      color={color}
+      shape="rounded"
+      {...props}
+    >
       {children}
     </Button>
   )
