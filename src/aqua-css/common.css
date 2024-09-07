@@ -1,0 +1,28 @@
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.link--icon {
+  display: flex;
+  gap: 0.4em;
+  align-items: center;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

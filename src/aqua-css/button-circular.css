@@ -1,0 +1,111 @@
+/** Horizontal rectangular button with rounded edges. */
+.aqua-btn-circular {
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--aqua-font-family);
+  font-size: var(--aqua-font-size);
+  color: var(--aqua-color-black);
+  background: radial-gradient(
+    circle at 50% 40%,
+    var(--aqua-color-gray-1) 30%,
+    var(--aqua-color-gray-2) 80%
+  );
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid var(--aqua-color-gray-3);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px var(--aqua-shadow-color); /* Enhanced shadow */
+  width: 1.5em; /* Increased size for better appearance */
+  height: 1.5em;
+  padding: 0.2em;
+  transition: transform 0.2s; /* Adding interaction effect */
+}
+
+.aqua-btn-circular:active {
+  transform: scale(0.95); /* Button press effect */
+}
+
+/** Gel effect */
+.aqua-btn-circular:before,
+.aqua-btn-circular:after {
+  content: ' ';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.aqua-btn-circular:before {
+  left: 20%;
+  width: 60%;
+  top: 3px;
+  height: 25%;
+  background: linear-gradient(
+    to top,
+    transparent,
+    rgba(255, 255, 255, 0.9) 65%
+  );
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.aqua-btn-circular:after {
+  left: 25%;
+  width: 50%;
+  bottom: 3px;
+  height: 30%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+.aqua-btn-circular--lg {
+  font-size: 20px;
+  width: 2.5em; /* Adjusted size for large */
+  height: 2.5em;
+}
+
+.aqua-btn-circular--blue {
+  background: radial-gradient(
+    circle at 50% 40%,
+    color-mix(in srgb, var(--aqua-color-blue) 50%, #ffffff) 30%,
+    color-mix(in srgb, var(--aqua-color-blue) 80%, #000000) 90%
+  );
+}
+
+.aqua-btn-circular--red {
+  background: radial-gradient(
+    circle at 50% 40%,
+    color-mix(in srgb, var(--aqua-color-red) 50%, #ffffff) 30%,
+    color-mix(in srgb, var(--aqua-color-red) 80%, #000000) 90%
+  );
+}
+
+.aqua-btn-circular--green {
+  background: radial-gradient(
+    circle at 50% 40%,
+    color-mix(in srgb, var(--aqua-color-green) 50%, #ffffff) 30%,
+    color-mix(in srgb, var(--aqua-color-green) 80%, #000000) 90%
+  );
+}
+
+.aqua-btn-circular--yellow {
+  background: radial-gradient(
+    circle at 50% 40%,
+    color-mix(in srgb, var(--aqua-color-yellow) 50%, #ffffff) 30%,
+    color-mix(in srgb, var(--aqua-color-yellow) 80%, #000000) 90%
+  );
+}
+
+.aqua-btn-circular:disabled,
+.aqua-btn-circular[disabled] {
+  pointer-events: none;
+  background: var(
+    --aqua-color-gray-3
+  ); /* Use a gray color for disabled state */
+  opacity: 0.6;
+}
