@@ -2,47 +2,58 @@
   font-size: 62.5%;
 }
 
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
-  background-image: url('/img/mac_osx_tiger_wallpaper.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   font-family: var(--aqua-font-family);
   font-size: 1.4rem;
   font-weight: 400;
   font-style: normal;
+  line-height: 1.3;
   padding: 0;
   margin: 0;
-  background-color: #3263a8;
-  line-height: 1.3;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
-#desktop {
+.desktop {
+  background-color: #3263a8;
+  background-image: url('/img/mac_osx_tiger_wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor:
+    url('../../assets/cursor/default.svg') 16 16,
+    auto;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-#desktop .aqua-window {
+.desktop__main {
+  position: relative;
+  flex-grow: 1;
+}
+
+.desktop .aqua-window {
   margin: 15px;
   transition: translate 400ms;
 }
 
-.loading {
-  cursor:
-    url('../../assets/cursor/default.svg') 16 16,
-    auto;
-}
-
 @media screen and (min-width: 768px) {
-  #desktop .aqua-window {
+  .desktop .aqua-window {
     position: absolute;
     top: 0;
     left: 0;

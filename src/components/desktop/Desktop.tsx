@@ -7,9 +7,9 @@ import { MenuBar } from './MenuBar'
 
 export const Desktop: React.FC = () => {
   return (
-    <div className="desktop loading">
+    <div className="desktop">
       <MenuBar />
-      <main id="desktop">
+      <main className="desktop__main">
         <InfoWindow title="About" id="ui-window-info-1" />
         <ProgramWindow
           title="Unnamed program"

@@ -1,9 +1,7 @@
 .aqua-menubar {
   position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
+  z-index: 99;
   color: var(--aqua-color-black);
   background-color: var(--aqua-color-white);
   font-family: var(--aqua-font-family);
