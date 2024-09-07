@@ -21,6 +21,15 @@
   padding-right: 1em;
 }
 
+.aqua-menubar__col {
+  display: flex;
+  flex-basis: 100%;
+}
+
+.aqua-menubar__col--right {
+  justify-content: end;
+}
+
 .aqua-menubar__item {
   position: relative;
   cursor: default;
@@ -32,10 +41,6 @@
 .aqua-menubar__item--programname {
   font-weight: 600;
   font-family: 'Lucida Grande Bold';
-}
-
-.aqua-menubar__item--datetime {
-  margin-left: auto;
 }
 
 .aqua-menubar__item--datetime:hover {
