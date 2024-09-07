@@ -27,8 +27,8 @@
 .aqua-window__title-inner {
   display: flex;
   flex-wrap: nowrap;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   justify-content: space-between;
