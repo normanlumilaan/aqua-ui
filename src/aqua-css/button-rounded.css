@@ -4,12 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 1.6em;
+  min-height: 1.3em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-family: var(--aqua-font-family);
   font-size: var(--aqua-font-size);
+  line-height: var(--aqua-line-height);
   color: var(--aqua-color-black);
   background: radial-gradient(
     circle at 50% 60%,
@@ -19,11 +20,12 @@
   cursor: pointer;
   box-sizing: border-box;
   border: 1px solid var(--aqua-color-gray-3);
-  padding: 0.3em 1.6em; /* Adjusted padding for more rounded appearance */
-  border-radius: 1em; /* Simplified border radius */
+  padding: 0.3em 1.6em;
+  border-radius: 1em;
   position: relative;
-  box-shadow: 0 2px 4px var(--aqua-shadow-color); /* Enhanced shadow */
-  flex-shrink: 0;
+  box-shadow: 0 2px 4px var(--aqua-shadow-color);
+  flex-shrink: 1; /* Prevent shrinking */
+  flex-grow: 0; /* Allow growing */
   transition:
     transform 0.2s,
     box-shadow 0.2s;

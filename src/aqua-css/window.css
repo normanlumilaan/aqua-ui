@@ -1,3 +1,13 @@
+:root {
+  --aqua-color-blue: #007aff; /* Mac OS X Aqua blue */
+  --aqua-color-gray-1: #e1e1e1;
+  --aqua-color-gray-2: #d8d8d8;
+  --aqua-color-white: #ffffff;
+  --aqua-shadow-color: rgba(0, 0, 0, 0.2);
+  --aqua-highlight: linear-gradient(180deg, #f0f0f5, #d9d9df);
+  --aqua-border-radius: 1em; /* Rounded corners */
+}
+
 .aqua-window {
   border-top-left-radius: 0.8em;
   border-top-right-radius: 0.8em;
@@ -27,8 +37,8 @@
 .aqua-window__title-inner {
   display: flex;
   flex-wrap: nowrap;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   justify-content: space-between;
@@ -120,4 +130,8 @@ Possibly replaced by button
 .aqua-window:focus .aqua-window__title,
 .aqua-window:focus-within .aqua-window__title {
   opacity: 1;
+}
+
+.aqua-window:not(:focus) .aqua-window__buttons-btn {
+  background: var(--aqua-color-gray-1);
 }

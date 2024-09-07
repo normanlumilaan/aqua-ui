@@ -1,4 +1,3 @@
-/** Horizontal rectangular button with rounded edges. */
 .aqua-btn-circular {
   appearance: none;
   display: flex;
@@ -10,6 +9,7 @@
   white-space: nowrap;
   font-family: var(--aqua-font-family);
   font-size: var(--aqua-font-size);
+  line-height: var(--aqua-line-height);
   color: var(--aqua-color-black);
   background: radial-gradient(
     circle at 50% 40%,
@@ -20,15 +20,15 @@
   box-sizing: border-box;
   border: 1px solid var(--aqua-color-gray-3);
   border-radius: 50%;
-  box-shadow: 0 2px 5px var(--aqua-shadow-color); /* Enhanced shadow */
-  width: 1.5em; /* Increased size for better appearance */
-  height: 1.5em;
+  box-shadow: 0 0px 5px var(--aqua-shadow-color);
+  width: 1.3em;
+  height: 1.3em;
   padding: 0.2em;
-  transition: transform 0.2s; /* Adding interaction effect */
+  transition: transform 0.2s;
 }
 
 .aqua-btn-circular:active {
-  transform: scale(0.95); /* Button press effect */
+  transform: scale(0.95);
 }
 
 /** Gel effect */
@@ -54,11 +54,11 @@
 }
 
 .aqua-btn-circular:after {
-  left: 25%;
-  width: 50%;
+  left: 20%;
+  width: 60%;
   bottom: 3px;
   height: 30%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.7), transparent);
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
 }

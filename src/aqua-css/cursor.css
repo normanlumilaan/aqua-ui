@@ -1,0 +1,11 @@
+.cursor {
+  cursor:
+    url('../assets/cursor/cursor-default.svg') 0 0,
+    auto;
+}
+
+.cursor--progress {
+  cursor:
+    url('../assets/cursor/cursor-progress.svg') 0 0,
+    progress;
+}

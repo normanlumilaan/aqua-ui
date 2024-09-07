@@ -11,7 +11,13 @@ export const ButtonCircular: React.FC<ButtonCircularProps> = ({
   ...props
 }) => {
   return (
-    <Button label={label} color={color} shape="circular" {...props}>
+    <Button
+      className={className}
+      label={label}
+      color={color}
+      shape="circular"
+      {...props}
+    >
       {children}
     </Button>
   )
