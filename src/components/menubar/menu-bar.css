@@ -34,11 +34,11 @@
   font-family: 'Lucida Grande Bold';
 }
 
-.aqua-menubar__item--clock {
+.aqua-menubar__item--datetime {
   margin-left: auto;
 }
 
-.aqua-menubar__item--clock:hover {
+.aqua-menubar__item--datetime:hover {
   background-color: transparent;
   color: inherit;
 }

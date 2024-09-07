@@ -3,7 +3,7 @@ import React from 'react'
 import { InfoWindow } from '../ui/window/InfoWindow'
 import { DialogConfirm } from '../ui/dialog/DialogConfirm'
 import { ProgramWindow } from '../ui/window/ProgramWindow'
-import { MenuBar } from './MenuBar'
+import { MenuBar } from '../menubar/MenuBar'
 
 export const Desktop: React.FC = () => {
   return (

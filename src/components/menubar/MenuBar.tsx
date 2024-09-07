@@ -1,11 +1,7 @@
-import React, { HTMLAttributes } from 'react'
+import React from 'react'
 import logo from '../../assets/icons/heart.svg'
-
-interface MenuItemProp {
-  label: string
-  url: string
-  shortcut?: string
-}
+import { MenuBarSubmenu, MenuBarSubmenuItem } from './MenuBarSubmenu'
+import { DateTime } from './DateTime'
 
 const programMenu = [
   { url: '#aqua-ui-css-info', label: 'About this app' },
@@ -26,31 +22,6 @@ const sampleSubmenu = [
   { url: '#', label: 'Location', shortcut: '⌘⌥L' },
   { url: '#', label: 'No Shortcut' },
 ]
-
-const MenuBarSubmenuItem: React.FC<MenuItemProp> = ({
-  url,
-  label,
-  shortcut,
-}) => {
-  return (
-    <li className="aqua-menubar-submenu__item" key={label}>
-      <a href={url} className="aqua-menubar-submenu__item-a">
-        <span>{label}</span>
-        {shortcut && <span>{shortcut}</span>}
-      </a>
-    </li>
-  )
-}
-
-const MenuBarSubmenu: React.FC<
-  { id: string } & HTMLAttributes<HTMLUListElement>
-> = ({ id, children }) => {
-  return (
-    <ul className="aqua-menubar-submenu" id={id}>
-      {children}
-    </ul>
-  )
-}
 
 export const MenuBar: React.FC = () => {
   return (
@@ -100,8 +71,8 @@ export const MenuBar: React.FC = () => {
             </li>
           </ul>
         </nav>
-        <div className="aqua-menubar__item aqua-menubar__item--clock">
-          <span id="menubar-clock">00:00</span>
+        <div className="aqua-menubar__item aqua-menubar__item--datetime">
+          <DateTime />
         </div>
       </div>
     </header>
