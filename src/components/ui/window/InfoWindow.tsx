@@ -16,7 +16,10 @@ export const InfoWindow: React.FC<{ id: string; title: string }> = ({
             <LayoutWrapper>
               <LayoutRow align="center">
                 <LayoutCol width="10">
-                  <p>Description</p>
+                  <p>
+                    Aqua UI is an React front-end experiment inspired by Apple
+                    Mac OS X 10.0 Aqua theme introduced back in year 2000.
+                  </p>
                   <p>
                     <a href="https://guidebookgallery.org/screenshots/macosx100">
                       OS X 10.0 screenshots

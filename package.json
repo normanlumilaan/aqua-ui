@@ -1,6 +1,6 @@
 {
   "name": "aqua-ui",
-  "description": "Aqua UI is an front-end experiment inspired by Apple Mac OS X Aqua theme",
+  "description": "Aqua UI is an React front-end experiment inspired by Apple Mac OS X 10.0 Aqua theme introduced back in year 2000.",
   "private": true,
   "version": "0.0.2",
   "type": "module",

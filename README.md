@@ -2,7 +2,7 @@
 
 ⚠️ Work in progress ⚠️
 
-An front-end experiment inspired by Apple Mac OS X Aqua theme introduced back in year 2000.
+Aqua UI is an React front-end experiment inspired by Apple Mac OS X 10.0 Aqua theme introduced back in year 2000.
 
 More about Aqua UI
 
