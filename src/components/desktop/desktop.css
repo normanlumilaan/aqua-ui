@@ -29,14 +29,10 @@ body {
   background-size: cover;
   background-attachment: fixed;
   width: 100vw;
-  height: 100vh;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
-  cursor:
-    url('../../assets/cursor/default.svg') 16 16,
-    auto;
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
