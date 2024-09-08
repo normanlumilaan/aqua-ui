@@ -50,17 +50,17 @@ export const ProgramWindow: React.FC<{
               <LayoutRow>
                 <LayoutCol width="12">
                   <p>
-                    Window-buttons, navbar and two rows with columns 12 and 2 x
-                    6.
+                    Window with titlebar buttons, menu and two rows of 12 column
+                    layout.
                   </p>
                 </LayoutCol>
               </LayoutRow>
               <LayoutRow>
                 <LayoutCol width="6">
-                  <p>Column A</p>
+                  <p>Column width 6</p>
                 </LayoutCol>
                 <LayoutCol width="6">
-                  <p>Column B</p>
+                  <p>Column width 6</p>
                   <LayoutRow align="end">
                     <ButtonRounded label="White button">White</ButtonRounded>
                     <ButtonRounded label="Red button" color="red">

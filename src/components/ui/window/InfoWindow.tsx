@@ -17,23 +17,37 @@ export const InfoWindow: React.FC<{ id: string; title: string }> = ({
               <LayoutRow align="center">
                 <LayoutCol width="10">
                   <p>
-                    Aqua UI is an React front-end experiment inspired by Apple
-                    Mac OS X 10.0 Aqua theme introduced back in year 2000.
+                    Aqua UI is an ongoing front-end experiment built with React
+                    inspired by Apple Mac OS X 10.0 Aqua theme introduced back
+                    in year 2000.
                   </p>
                   <p>
                     <a href="https://guidebookgallery.org/screenshots/macosx100">
                       OS X 10.0 screenshots
                     </a>
                   </p>
-                  <a
-                    className="link link--icon"
-                    href="https://github.com/normanlumilaan/aqua-ui"
-                  >
-                    <figure className="icon icon--sm">
-                      <img src={githubLogo} alt="GitHub logo" />
-                    </figure>
-                    <span>Aqua UI</span>
-                  </a>
+                  <p>
+                    <a
+                      className="link link--icon"
+                      href="https://github.com/normanlumilaan/aqua-ui"
+                    >
+                      <figure className="icon icon--sm">
+                        <img src={githubLogo} alt="GitHub logo" />
+                      </figure>
+                      <span>Aqua UI</span>
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      className="link link--icon"
+                      href="https://normanlumilaan.github.io"
+                    >
+                      <figure className="icon icon--sm">
+                        <img src={githubLogo} alt="GitHub logo" />
+                      </figure>
+                      <span>https://normanlumilaan.github.io</span>
+                    </a>
+                  </p>
                   <p>{new Date().getFullYear()}</p>
                 </LayoutCol>
               </LayoutRow>
