@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { type HTMLAttributes } from 'react'
 import logo from '../../assets/icons/heart.svg'
-import { MenuBarSubmenu, MenuBarSubmenuItem } from './MenuBarSubmenu'
+import { MenuBarSubmenu } from './MenuBarSubmenu'
 import { DateTime } from './DateTime'
 
-const programMenu = [
+interface MenuBarItemLabelProps extends HTMLAttributes<HTMLButtonElement> {
+  label: string
+  ownerId: string
+}
+
+const demoMenu1 = [
   { url: '#aqua-ui-css-info', label: 'About this app' },
   {
     url: 'https://github.com/normanlumilaan/aqua-ui.git',
@@ -15,7 +20,7 @@ const programMenu = [
   },
 ]
 
-const sampleSubmenu = [
+const demoMenu2 = [
   { url: '#', label: 'Submenu Item', shortcut: '⌘⌥S' },
   { url: '#', label: 'Second', shortcut: '⌘2' },
   { url: '#', label: 'Recents', shortcut: '⌘⌥R' },
@@ -23,58 +28,65 @@ const sampleSubmenu = [
   { url: '#', label: 'No Shortcut' },
 ]
 
+const MenuBarItemLabel: React.FC<MenuBarItemLabelProps> = ({
+  label,
+  ownerId,
+  children,
+}) => {
+  return (
+    <button
+      id={`${ownerId}-label`}
+      aria-label={label}
+      type="button"
+      className="aqua-menubar__item-a"
+    >
+      {children}
+    </button>
+  )
+}
+
+const MenuBarItem: React.FC<
+  { id: string } & HTMLAttributes<HTMLDivElement>
+> = ({ id, children }) => {
+  return (
+    <div id={id} className="aqua-menubar__item">
+      {children}
+    </div>
+  )
+}
+
 export const MenuBar: React.FC = () => {
+  const programMenuItems = ['File', 'Edit', 'View', 'Help'].map((item, i) => (
+    <MenuBarItem id={`menubar-program-${item}`} key={item}>
+      <MenuBarItemLabel label={item} ownerId={`menubar-program-${item}`}>
+        {item}
+      </MenuBarItemLabel>
+      <MenuBarSubmenu items={i % 2 === 0 ? demoMenu2 : demoMenu1} />
+    </MenuBarItem>
+  ))
+
   return (
     <header className="aqua-menubar">
       <div className="aqua-menubar__row">
         <div className="aqua-menubar__col">
-          <div className="aqua-menubar__item">
-            <a href="/" className="aqua-menubar__item-a" id="aqua-menubar-logo">
+          <MenuBarItem id="menubar-system-menu">
+            <MenuBarItemLabel label="System menu" ownerId="menubar-system-menu">
               <figure className="icon">
                 <img src={logo} alt="heart" width="24" height="24" />
               </figure>
-            </a>
-            <MenuBarSubmenu id="aqua-menubar-program-menu">
-              {programMenu.map(({ url, label }) => (
-                <MenuBarSubmenuItem key={label} label={label} url={url} />
-              ))}
-            </MenuBarSubmenu>
-          </div>
-          <div className="aqua-menubar__item aqua-menubar__item--programname">
-            <button className="aqua-menubar__item-a" type="button">
+            </MenuBarItemLabel>
+            <MenuBarSubmenu items={demoMenu2} id="menubar-system-menu" />
+          </MenuBarItem>
+          <MenuBarItem id="menubar-program-main">
+            <MenuBarItemLabel label="Aqua" ownerId="menubar-program-main">
               Aqua UI
-            </button>
-            <MenuBarSubmenu id="aqua-menubar-program-menu">
-              {sampleSubmenu.map(({ url, label, shortcut }) => (
-                <MenuBarSubmenuItem
-                  key={label}
-                  label={label}
-                  url={url}
-                  shortcut={shortcut}
-                />
-              ))}
-            </MenuBarSubmenu>
-          </div>
-          <nav className="aqua-menubar__nav">
-            <ul className="aqua-menubar__nav-menu">
-              <li className="aqua-menubar__item">
-                <button className="aqua-menubar__item-a">File</button>
-              </li>
-              <li className="aqua-menubar__item">
-                <a href="#" className="aqua-menubar__item-a">
-                  Edit
-                </a>
-              </li>
-              <li className="aqua-menubar__item">
-                <a href="#" className="aqua-menubar__item-a">
-                  Info
-                </a>
-              </li>
-            </ul>
-          </nav>
+            </MenuBarItemLabel>
+            <MenuBarSubmenu items={demoMenu1} />
+          </MenuBarItem>
+          {programMenuItems}
         </div>
-        <div className="aqua-menubar__col--right">
-          <div className="aqua-menubar__item aqua-menubar__item--datetime">
+        <div className="aqua-menubar__col aqua-menubar__col--right">
+          <div className="aqua-menubar__item">
             <DateTime />
           </div>
         </div>

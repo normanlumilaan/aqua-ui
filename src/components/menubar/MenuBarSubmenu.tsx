@@ -22,11 +22,20 @@ export const MenuBarSubmenuItem: React.FC<MenuItemProp> = ({
 }
 
 export const MenuBarSubmenu: React.FC<
-  { id: string } & HTMLAttributes<HTMLUListElement>
-> = ({ id, children }) => {
+  { items: MenuItemProp[] } & HTMLAttributes<HTMLUListElement>
+> = ({ id, items, ...props }) => {
+  const list = items.map(({ url, label, shortcut }) => (
+    <MenuBarSubmenuItem
+      url={url}
+      label={label}
+      shortcut={shortcut}
+      key={label}
+    />
+  ))
+
   return (
-    <ul className="aqua-menubar-submenu" id={id}>
-      {children}
+    <ul className="aqua-menubar-submenu" {...props}>
+      {list}
     </ul>
   )
 }

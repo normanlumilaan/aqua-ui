@@ -15,15 +15,16 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
   background: var(--aqua-bg-stripes);
   padding-left: 1em;
   padding-right: 1em;
+  gap: 1rem;
 }
 
 .aqua-menubar__col {
   display: flex;
   flex-basis: 100%;
+  align-items: center;
 }
 
 .aqua-menubar__col--right {
@@ -38,14 +39,9 @@
   text-overflow: ellipsis;
 }
 
-.aqua-menubar__item--programname {
+#menubar-program-main-label {
   font-weight: 600;
   font-family: 'Lucida Grande Bold';
-}
-
-.aqua-menubar__item--datetime:hover {
-  background-color: transparent;
-  color: inherit;
 }
 
 /** Anchor or button */
