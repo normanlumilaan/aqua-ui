@@ -1,15 +1,11 @@
 import React, { type HTMLAttributes } from 'react'
 
-import { Window, WindowTitle, WindowBody } from '../../window'
-
-export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
-  /** Dialog has focus. Default false */
-  focus: boolean
-  /** Dialog id */
-  id: string
-  /** Dialog window title */
-  title: string
-}
+import {
+  Window,
+  WindowTitle,
+  WindowBody,
+  type WindowRenderProps,
+} from '../../window'
 
 /** Base dialog component */
 export const DialogIcon: React.FC<{ src: string; alt: string }> = ({
@@ -29,26 +25,25 @@ export const DialogIcon: React.FC<{ src: string; alt: string }> = ({
   )
 }
 
-export const Dialog: React.FC<DialogProps> = ({
+export const Dialog: React.FC<WindowRenderProps> = ({
   children,
-  focus = false,
   id,
-  title,
-  className,
+  label,
   ...props
 }) => {
   return (
     <Window
-      id={id}
-      data-aqua-focus={focus}
+      title={label}
       aria-labelledby={`${id}-title`}
       aria-describedby={`${id}-desc`}
       focus={false}
       role="dialog"
       className="aqua-dialog"
+      label={label}
+      id={id}
       {...props}
     >
-      <WindowTitle title={title} ownerId={id} />
+      <WindowTitle title={label} ownerId={id} />
       <WindowBody>{children}</WindowBody>
     </Window>
   )

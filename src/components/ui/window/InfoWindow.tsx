@@ -1,15 +1,22 @@
 import React from 'react'
-import { Window, WindowTitle, WindowBody, WindowContent } from '../../window'
+import {
+  Window,
+  WindowTitle,
+  WindowBody,
+  WindowContent,
+  type WindowRenderProps,
+} from '../../window'
 import { Layout, LayoutCol, LayoutRow, LayoutWrapper } from '../../layout'
 import githubLogo from '../../../assets/icons/github.svg'
 
-export const InfoWindow: React.FC<{ id: string; title: string }> = ({
+export const InfoWindow: React.FC<WindowRenderProps> = ({
   id,
-  title,
+  label,
+  ...props
 }) => {
   return (
-    <Window focus={false} id={id}>
-      <WindowTitle title={title} ownerId={id} />
+    <Window label={label} id={id} {...props}>
+      <WindowTitle title={label} ownerId={id} />
       <WindowBody>
         <WindowContent>
           <Layout>

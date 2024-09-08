@@ -10,13 +10,14 @@ export const Desktop: React.FC = () => {
     <div className="desktop cursor">
       <MenuBar />
       <main className="desktop__main">
-        <InfoWindow title="About" id="ui-window-info-1" />
+        <InfoWindow x={0} y={0} label="About" id="ui-window-info-1" />
         <ProgramWindow
-          title="Unnamed program"
+          x={50}
+          y={50}
+          label="Unnamed program"
           id="ui-program-window"
-          focus={true}
         />
-        <DialogConfirm focus={false} title="Confirm" id="aqua-dialog-1" />
+        <DialogConfirm x={100} y={100} label="Confirm" id="aqua-dialog-1" />
       </main>
     </div>
   )

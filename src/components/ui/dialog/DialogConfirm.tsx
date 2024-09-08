@@ -3,14 +3,16 @@ import React from 'react'
 import { Dialog, DialogIcon } from './Dialog'
 import { Layout, LayoutCol, LayoutRow } from '../../layout'
 import { ButtonRounded } from '../../buttons'
+import { type WindowRenderProps } from '../../window'
 
-export const DialogConfirm: React.FC<{
-  id: string
-  title: string
-  focus: boolean
-}> = ({ id, title, focus }) => {
+export const DialogConfirm: React.FC<WindowRenderProps> = ({
+  id,
+  label,
+  focus,
+  ...props
+}) => {
   return (
-    <Dialog title={title} id={id} focus={focus}>
+    <Dialog label={label} id={id} {...props}>
       <Layout bgStyle="stripes">
         <LayoutRow className="aqua-dialog__body">
           <LayoutCol width="3">
