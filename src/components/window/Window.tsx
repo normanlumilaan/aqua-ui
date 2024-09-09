@@ -1,51 +1,45 @@
 import React, { type HTMLAttributes } from 'react'
 import clsx from 'clsx'
+import { useDraggable } from '@dnd-kit/core'
+import { CSS } from '@dnd-kit/utilities'
 
 export interface WindowProps {
-  /** Window id */
-  id: string
-  /** Window label (visible title) */
   label: string
-  /** Position x-axis */
   x: number
-  /** Position y-axis */
   y: number
+  z: number
+  id: string
 }
 
-export interface WindowRenderProps
-  extends WindowProps,
-    Omit<HTMLAttributes<HTMLDivElement>, 'id'> {
-  /** focus
-   * @deprecated
-   */
-  focus?: boolean
-}
+interface WindowRenderProps extends WindowProps {}
 
 /*
  * Window component that holds window-title and window-body
  */
-export const Window: React.FC<WindowRenderProps> = ({
-  children,
-  className,
-  label,
-  focus = false,
-  id,
-  x,
-  y,
-  ...props
-}) => {
-  console.log('x', x, 'y', y)
+export const Window: React.FC<
+  WindowRenderProps & HTMLAttributes<HTMLDivElement>
+> = ({ children, className, label, id, x, y, z, ...props }) => {
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({
+    id: id,
+  })
+
+  const style = {
+    top: y,
+    left: x,
+    zIndex: z,
+    transform: transform ? CSS.Translate.toString(transform) : undefined,
+  }
+
   return (
     <div
+      ref={setNodeRef}
+      style={style}
+      {...listeners}
+      {...attributes}
       id={id}
       tabIndex={0}
-      data-aqua-ui-focus={focus}
-      data-aqua-ui="window-main"
       className={clsx('aqua-window', className)}
       aria-label={label}
-      style={{
-        transform: `translate3d(${x}px, ${y}px, 0px)`,
-      }}
       {...props}
     >
       {children}
