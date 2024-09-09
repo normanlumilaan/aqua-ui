@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { MenuBar } from '../menubar/MenuBar'
-import { DesktopDraggable } from './DesktopDraggable'
+import { DesktopDraggable, type DraggableItem } from './DesktopDraggable'
 import { type WindowProps } from '../window'
 
 /** For demo puropses */
@@ -8,21 +8,10 @@ import { AlertWindow } from './AlertWindow'
 import { AboutWindow } from './AboutWindow'
 import { AProgramWindow } from './AProgramWindow'
 
-export interface DesktopDraggableItem {
-  /** Draggable item id */
-  id: string
-  /** Position on x-axis */
-  x: number
-  /** Position on y-axis */
-  y: number
-  /** Position on z-axis (for stacking) */
-  z: number
-}
-
-export type DesktopDraggableWindow = DesktopDraggableItem & WindowProps
+export type DesktopDraggableWindow = DraggableItem & WindowProps
 
 export type DesktopUpdateWindowPositionFn = (
-  args: Pick<DesktopDraggableItem, 'id' | 'x' | 'y'>
+  args: Pick<DraggableItem, 'id' | 'x' | 'y'>
 ) => void
 
 export const Desktop: React.FC = () => {

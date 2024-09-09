@@ -33,7 +33,6 @@
 
 .aqua-menubar__item {
   position: relative;
-  cursor: default;
   text-shadow: var(--aqua-text-shadow);
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -53,7 +52,6 @@
   padding-bottom: 0.2em;
   padding-left: 0.6em;
   padding-right: 0.6em;
-  cursor: default;
   text-shadow: var(--aqua-text-shadow);
   position: relative;
   appearance: none;

@@ -6,6 +6,17 @@ interface DesktopDraggableProps extends HTMLAttributes<HTMLDivElement> {
   updateItemPosition: DesktopUpdateWindowPositionFn
 }
 
+export interface DraggableItem {
+  /** Draggable item id */
+  id: string
+  /** Position on x-axis */
+  x: number
+  /** Position on y-axis */
+  y: number
+  /** Position on z-axis (for stacking) */
+  z: number
+}
+
 export const DesktopDraggable: React.FC<
   DesktopDraggableProps & HTMLAttributes<HTMLDivElement>
 > = ({ children, updateItemPosition }) => {

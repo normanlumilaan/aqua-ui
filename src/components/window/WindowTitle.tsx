@@ -1,6 +1,6 @@
 import React, { type HTMLAttributes } from 'react'
-
 import { ButtonCircular, ButtonRounded } from '../buttons'
+import { Icon } from '../icons/Icon'
 
 export interface WindowTitleProps extends HTMLAttributes<HTMLDivElement> {
   /** Window visible title */
@@ -15,20 +15,26 @@ const WindowButtons: React.FC = () => {
   return (
     <div className="aqua-window__buttons" data-aqua-elem="window-buttons">
       <ButtonCircular
-        label="Close window"
+        label="Close button"
         color="red"
-        className="aqua-window__buttons-btn"
-      />
+        className="aqua-window__buttons-btn aqua-window__buttons--close"
+      >
+        <Icon href="#icon-window-control-close" />
+      </ButtonCircular>
       <ButtonCircular
-        label="Minimize"
+        label="Minimize button"
         color="yellow"
-        className="aqua-window__buttons-btn"
-      />
+        className="aqua-window__buttons-btn aqua-window__buttons--minimize"
+      >
+        <Icon href="#icon-window-control-minimize" />
+      </ButtonCircular>
       <ButtonCircular
-        label="Maximize"
+        label="Zoom button"
         color="green"
-        className="aqua-window__buttons-btn"
-      />
+        className="aqua-window__buttons-btn aqua-window__buttons--zoom"
+      >
+        <Icon href="#icon-window-control-zoom" />
+      </ButtonCircular>
     </div>
   )
 }

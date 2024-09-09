@@ -47,19 +47,3 @@ body {
   width: 100%;
   height: 100%;
 }
-
-.desktop .aqua-window {
-  margin: 15px;
-  transition: translate 400ms;
-}
-
-@media screen and (min-width: 768px) {
-  .desktop .aqua-window {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-}

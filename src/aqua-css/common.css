@@ -1,6 +1,11 @@
 a {
   color: inherit;
   display: inline-block;
+  cursor: inherit;
+}
+
+button {
+  cursor: inherit;
 }
 
 a:hover {
