@@ -16,7 +16,6 @@
     var(--aqua-color-gray-1) 30%,
     var(--aqua-color-gray-2) 80%
   );
-  cursor: pointer;
   box-sizing: border-box;
   border: 1px solid var(--aqua-color-gray-3);
   border-radius: 50%;
