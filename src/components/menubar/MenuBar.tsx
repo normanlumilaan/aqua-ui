@@ -1,5 +1,4 @@
 import React, { type HTMLAttributes } from 'react'
-import logo from '../../assets/icons/heart.svg'
 import { MenuBarSubmenu } from './MenuBarSubmenu'
 import { DateTime } from './DateTime'
 import { Icon } from '../icons/Icon'
