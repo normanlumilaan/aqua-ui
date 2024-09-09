@@ -52,7 +52,7 @@
 .aqua-window__title-txt {
   font-size: inherit;
   text-align: center;
-  flex-basis: 50%;
+  flex-basis: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -62,9 +62,16 @@
 
 .aqua-window__buttons {
   display: flex;
-  flex-basis: 25%;
   flex-grow: 0;
   gap: 0.8em;
+}
+
+.aqua-window__buttons .aqua-btn__label {
+  opacity: 0;
+}
+
+.aqua-window:focus .aqua-window__buttons:hover .aqua-btn__label {
+  opacity: 1;
 }
 
 /** 

@@ -15,20 +15,40 @@ const WindowButtons: React.FC = () => {
   return (
     <div className="aqua-window__buttons" data-aqua-elem="window-buttons">
       <ButtonCircular
-        label="Close window"
+        label="Close button"
         color="red"
-        className="aqua-window__buttons-btn"
-      />
+        className="aqua-window__buttons-btn aqua-window__buttons--close"
+      >
+        <svg
+          role="image"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <use href="#icon-window-control-close" />
+        </svg>
+      </ButtonCircular>
       <ButtonCircular
-        label="Minimize"
+        label="Minimize button"
         color="yellow"
-        className="aqua-window__buttons-btn"
-      />
+        className="aqua-window__buttons-btn aqua-window__buttons--minimize"
+      >
+        &#45;
+      </ButtonCircular>
       <ButtonCircular
-        label="Maximize"
+        label="Zoom button"
         color="green"
-        className="aqua-window__buttons-btn"
-      />
+        className="aqua-window__buttons-btn aqua-window__buttons--zoom"
+      >
+        <svg
+          role="image"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <use href="#icon-window-control-zoom" />
+        </svg>
+      </ButtonCircular>
     </div>
   )
 }
