@@ -38,7 +38,7 @@ body {
   overflow-x: hidden;
 }
 
-.desktop__main {
+.desktopDraggable {
   position: relative;
   flex-grow: 1;
 }
@@ -54,30 +54,7 @@ body {
     top: 0;
     left: 0;
   }
-
-  #ui-window-info-1 {
-    translate: 3% 3%;
-  }
-
-  #ui-program-window {
-    translate: 50% 90%;
-  }
-
-  #aqua-dialog-1 {
-    translate: 10% 200%;
-  }
 }
 
 @media screen and (min-width: 1024px) {
-  #ui-window-info-1 {
-    translate: 3% 3%;
-  }
-
-  #ui-program-window {
-    translate: 85% 75%;
-  }
-
-  #aqua-dialog-1 {
-    translate: 40% 200%;
-  }
 }

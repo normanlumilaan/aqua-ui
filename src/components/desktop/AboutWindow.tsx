@@ -1,15 +1,18 @@
 import React from 'react'
-import { Window, WindowTitle, WindowBody, WindowContent } from '../../window'
-import { Layout, LayoutCol, LayoutRow, LayoutWrapper } from '../../layout'
-import githubLogo from '../../../assets/icons/github.svg'
+import {
+  Window,
+  WindowTitle,
+  WindowBody,
+  WindowContent,
+  type WindowProps,
+} from '../window'
+import { Layout, LayoutCol, LayoutRow, LayoutWrapper } from '../layout'
+import githubLogo from '../../assets/icons/github.svg'
 
-export const InfoWindow: React.FC<{ id: string; title: string }> = ({
-  id,
-  title,
-}) => {
+export const AboutWindow: React.FC<WindowProps> = ({ id, label, ...props }) => {
   return (
-    <Window focus={false} id={id}>
-      <WindowTitle title={title} ownerId={id} />
+    <Window label={label} id={id} {...props}>
+      <WindowTitle title={label} ownerId={id} />
       <WindowBody>
         <WindowContent>
           <Layout>
@@ -26,7 +29,7 @@ export const InfoWindow: React.FC<{ id: string; title: string }> = ({
                       OS X 10.0 screenshots
                     </a>
                   </p>
-                  <p>
+                  <div>
                     <a
                       className="link link--icon"
                       href="https://github.com/normanlumilaan/aqua-ui"
@@ -36,8 +39,8 @@ export const InfoWindow: React.FC<{ id: string; title: string }> = ({
                       </figure>
                       <span>Aqua UI</span>
                     </a>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <a
                       className="link link--icon"
                       href="https://normanlumilaan.github.io"
@@ -47,7 +50,7 @@ export const InfoWindow: React.FC<{ id: string; title: string }> = ({
                       </figure>
                       <span>https://normanlumilaan.github.io</span>
                     </a>
-                  </p>
+                  </div>
                   <p>{new Date().getFullYear()}</p>
                 </LayoutCol>
               </LayoutRow>
@@ -58,3 +61,7 @@ export const InfoWindow: React.FC<{ id: string; title: string }> = ({
     </Window>
   )
 }
+
+AboutWindow.displayName = 'AboutWindow'
+
+export default AboutWindow

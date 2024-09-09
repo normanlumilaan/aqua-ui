@@ -7,20 +7,21 @@ import {
   WindowNavbar,
   WindowNavbarButton,
   WindowContent,
-} from '../../window'
+  type WindowProps,
+} from '../window'
 
-import { Layout, LayoutCol, LayoutRow, LayoutWrapper } from '../../layout'
+import { Layout, LayoutCol, LayoutRow, LayoutWrapper } from '../layout'
 
-import { ButtonRounded } from '../../buttons/ButtonRounded'
+import { ButtonRounded } from '../buttons/ButtonRounded'
 
-export const ProgramWindow: React.FC<{
-  focus: boolean
-  id: string
-  title: string
-}> = ({ id, title, focus }) => {
+export const AProgramWindow: React.FC<WindowProps> = ({
+  id,
+  label,
+  ...props
+}) => {
   return (
-    <Window focus={focus} id={id}>
-      <WindowTitle title={title} ownerId={id} hasButtons />
+    <Window label={label} id={id} {...props}>
+      <WindowTitle title={label} ownerId={id} hasButtons />
       <WindowBody>
         <WindowNavbar>
           <WindowNavbarButton label="Media">
@@ -77,6 +78,6 @@ export const ProgramWindow: React.FC<{
   )
 }
 
-ProgramWindow.displayName = 'ProgramWindow'
+AProgramWindow.displayName = 'AProgramWindow'
 
-export default ProgramWindow
+export default AProgramWindow

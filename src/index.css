@@ -1,4 +1,6 @@
 @import './aqua-css/variables.css';
+@import './aqua-css/desktop.css';
+@import './aqua-css/menu-bar.css';
 @import './aqua-css/cursor.css';
 @import './aqua-css/common.css';
 @import './aqua-css/button-base.css';
@@ -8,5 +10,3 @@
 @import './aqua-css/window.css';
 @import './aqua-css/icon.css';
 @import './aqua-css/dialog.css';
-@import './components/desktop/desktop.css';
-@import './components/menubar/menu-bar.css';
