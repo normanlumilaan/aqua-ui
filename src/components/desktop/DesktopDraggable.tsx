@@ -1,6 +1,5 @@
 import React, { type HTMLAttributes } from 'react'
 import { DndContext, type DragEndEvent } from '@dnd-kit/core'
-
 import { type DesktopUpdateWindowPositionFn } from './Desktop'
 
 interface DesktopDraggableProps extends HTMLAttributes<HTMLDivElement> {

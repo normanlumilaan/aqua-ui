@@ -1,4 +1,4 @@
-import React, { type HTMLAttributes } from 'react'
+import React, { type HTMLAttributes, memo } from 'react'
 import clsx from 'clsx'
 import { useDraggable } from '@dnd-kit/core'
 import { CSS } from '@dnd-kit/utilities'
@@ -14,7 +14,7 @@ export interface WindowProps {
 /*
  * Window component that holds window-title and window-body
  */
-export const Window: React.FC<WindowProps & HTMLAttributes<HTMLDivElement>> = ({
+const Window: React.FC<WindowProps & HTMLAttributes<HTMLDivElement>> = ({
   children,
   className,
   label,
@@ -54,4 +54,6 @@ export const Window: React.FC<WindowProps & HTMLAttributes<HTMLDivElement>> = ({
 
 Window.displayName = 'Window'
 
-export default Window
+const _Window = memo(Window)
+
+export { _Window as Window }

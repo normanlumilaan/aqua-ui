@@ -29,7 +29,7 @@ export const AboutWindow: React.FC<WindowProps> = ({ id, label, ...props }) => {
                       OS X 10.0 screenshots
                     </a>
                   </p>
-                  <p>
+                  <div>
                     <a
                       className="link link--icon"
                       href="https://github.com/normanlumilaan/aqua-ui"
@@ -39,8 +39,8 @@ export const AboutWindow: React.FC<WindowProps> = ({ id, label, ...props }) => {
                       </figure>
                       <span>Aqua UI</span>
                     </a>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <a
                       className="link link--icon"
                       href="https://normanlumilaan.github.io"
@@ -50,7 +50,7 @@ export const AboutWindow: React.FC<WindowProps> = ({ id, label, ...props }) => {
                       </figure>
                       <span>https://normanlumilaan.github.io</span>
                     </a>
-                  </p>
+                  </div>
                   <p>{new Date().getFullYear()}</p>
                 </LayoutCol>
               </LayoutRow>
