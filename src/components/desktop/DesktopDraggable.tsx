@@ -15,7 +15,7 @@ export const DesktopDraggable: React.FC<
   }
 
   return (
-    <main className="desktop__main">
+    <main className="desktopDraggable">
       <DndContext onDragEnd={onDragEndHandler}>{children}</DndContext>
     </main>
   )

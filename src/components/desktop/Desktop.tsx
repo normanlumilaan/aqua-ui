@@ -3,11 +3,10 @@ import { MenuBar } from '../menubar/MenuBar'
 import { DesktopDraggable } from './DesktopDraggable'
 import { type WindowProps } from '../window'
 
+/** For demo puropses */
 import { AlertWindow } from './AlertWindow'
-
-import { InfoWindow } from '../ui/window/InfoWindow'
-import { DialogConfirm } from '../ui/dialog/DialogConfirm'
-import { ProgramWindow } from '../ui/window/ProgramWindow'
+import { AboutWindow } from './AboutWindow'
+import { AProgramWindow } from './AProgramWindow'
 
 export interface DesktopDraggableItem {
   /** Draggable item id */
@@ -29,7 +28,7 @@ export type DesktopUpdateWindowPositionFn = (
 export const Desktop: React.FC = () => {
   const [windows, setWindows] = useState<DesktopDraggableWindow[]>([
     { id: 'window-1', label: 'Window 1', x: 0, y: 0, z: 1 },
-    { id: 'window-2', label: 'Confirm', x: 50, y: 50, z: 2 },
+    { id: 'window-2', label: 'A Program', x: 50, y: 50, z: 2 },
     { id: 'window-3', label: 'Confirm', x: 100, y: 100, z: 2 },
   ])
 
@@ -55,20 +54,22 @@ export const Desktop: React.FC = () => {
           switch (window.id) {
             case 'window-1':
               return (
-                <InfoWindow
+                <AboutWindow
                   key={window.id}
                   x={window.x}
                   y={window.y}
+                  z={window.z}
                   id={window.id}
                   label={window.label}
                 />
               )
             case 'window-2':
               return (
-                <ProgramWindow
+                <AProgramWindow
                   key={window.id}
                   x={window.x}
                   y={window.y}
+                  z={window.z}
                   id={window.id}
                   label={window.label}
                 />

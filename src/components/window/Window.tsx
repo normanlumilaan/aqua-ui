@@ -11,14 +11,19 @@ export interface WindowProps {
   id: string
 }
 
-interface WindowRenderProps extends WindowProps {}
-
 /*
  * Window component that holds window-title and window-body
  */
-export const Window: React.FC<
-  WindowRenderProps & HTMLAttributes<HTMLDivElement>
-> = ({ children, className, label, id, x, y, z, ...props }) => {
+export const Window: React.FC<WindowProps & HTMLAttributes<HTMLDivElement>> = ({
+  children,
+  className,
+  label,
+  id,
+  x,
+  y,
+  z,
+  ...props
+}) => {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id: id,
   })

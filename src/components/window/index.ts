@@ -1,4 +1,4 @@
-export { type WindowProps, type WindowRenderProps, Window } from './Window'
+export { type WindowProps, Window } from './Window'
 export { type WindowTitleProps, WindowTitle } from './WindowTitle'
 export { type WindowBodyProps, WindowBody } from './WindowBody'
 export { type WindowContentProps, WindowContent } from './WindowContent'

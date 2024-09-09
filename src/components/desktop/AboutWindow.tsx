@@ -4,16 +4,12 @@ import {
   WindowTitle,
   WindowBody,
   WindowContent,
-  type WindowRenderProps,
-} from '../../window'
-import { Layout, LayoutCol, LayoutRow, LayoutWrapper } from '../../layout'
-import githubLogo from '../../../assets/icons/github.svg'
+  type WindowProps,
+} from '../window'
+import { Layout, LayoutCol, LayoutRow, LayoutWrapper } from '../layout'
+import githubLogo from '../../assets/icons/github.svg'
 
-export const InfoWindow: React.FC<WindowRenderProps> = ({
-  id,
-  label,
-  ...props
-}) => {
+export const AboutWindow: React.FC<WindowProps> = ({ id, label, ...props }) => {
   return (
     <Window label={label} id={id} {...props}>
       <WindowTitle title={label} ownerId={id} />
@@ -65,3 +61,7 @@ export const InfoWindow: React.FC<WindowRenderProps> = ({
     </Window>
   )
 }
+
+AboutWindow.displayName = 'AboutWindow'
+
+export default AboutWindow

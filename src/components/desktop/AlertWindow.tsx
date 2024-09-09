@@ -7,7 +7,7 @@ import {
   type WindowProps,
 } from '../window'
 
-import { Layout, LayoutRow, LayoutCol, LayoutWrapper } from '../layout'
+import { Layout, LayoutRow, LayoutCol } from '../layout'
 import { ButtonRounded } from '../buttons'
 
 export const AlertWindow: React.FC<WindowProps> = (props) => {

@@ -38,7 +38,7 @@ body {
   overflow-x: hidden;
 }
 
-.desktop__main {
+.desktopDraggable {
   position: relative;
   flex-grow: 1;
 }
