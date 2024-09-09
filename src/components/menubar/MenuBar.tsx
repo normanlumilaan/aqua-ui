@@ -2,6 +2,7 @@ import React, { type HTMLAttributes } from 'react'
 import logo from '../../assets/icons/heart.svg'
 import { MenuBarSubmenu } from './MenuBarSubmenu'
 import { DateTime } from './DateTime'
+import { Icon } from '../icons/Icon'
 
 interface MenuBarItemLabelProps extends HTMLAttributes<HTMLButtonElement> {
   label: string
@@ -71,9 +72,7 @@ export const MenuBar: React.FC = () => {
         <div className="aqua-menubar__col">
           <MenuBarItem id="menubar-system-menu">
             <MenuBarItemLabel label="System menu" ownerId="menubar-system-menu">
-              <figure className="icon">
-                <img src={logo} alt="heart" width="24" height="24" />
-              </figure>
+              <Icon href="#icon-heart" />
             </MenuBarItemLabel>
             <MenuBarSubmenu items={demoMenu2} id="menubar-system-menu" />
           </MenuBarItem>

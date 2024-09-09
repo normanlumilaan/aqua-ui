@@ -7,7 +7,7 @@ import {
   type WindowProps,
 } from '../window'
 import { Layout, LayoutCol, LayoutRow, LayoutWrapper } from '../layout'
-import githubLogo from '../../assets/icons/github.svg'
+import { Icon } from '../icons/Icon'
 
 export const AboutWindow: React.FC<WindowProps> = ({ id, label, ...props }) => {
   return (
@@ -34,9 +34,7 @@ export const AboutWindow: React.FC<WindowProps> = ({ id, label, ...props }) => {
                       className="link link--icon"
                       href="https://github.com/normanlumilaan/aqua-ui"
                     >
-                      <figure className="icon icon--sm">
-                        <img src={githubLogo} alt="GitHub logo" />
-                      </figure>
+                      <Icon href="#icon-github" className="icon--sm" />
                       <span>Aqua UI</span>
                     </a>
                   </div>
@@ -45,9 +43,7 @@ export const AboutWindow: React.FC<WindowProps> = ({ id, label, ...props }) => {
                       className="link link--icon"
                       href="https://normanlumilaan.github.io"
                     >
-                      <figure className="icon icon--sm">
-                        <img src={githubLogo} alt="GitHub logo" />
-                      </figure>
+                      <Icon href="#icon-github" className="icon--sm" />
                       <span>https://normanlumilaan.github.io</span>
                     </a>
                   </div>
